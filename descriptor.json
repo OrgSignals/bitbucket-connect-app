@@ -1,0 +1,58 @@
+{
+    "key": "orgsignals",
+    "name": "OrgSignals",
+    "description": "Provides Engineering Insights",
+    "vendor": {
+        "name": "OrgSignals",
+        "url": "https://www.orgsignals.ai"
+    },
+    "baseUrl": "https://api.orgsignals.com",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/oauth2/callback/bitbucket/installed",
+        "uninstalled": "/oauth2/callback/bitbucket/uninstalled"
+    },
+    "modules": {
+        "postInstallRedirect": {
+            "key": "redirect",
+            "url": "https://app.orgsignals.com?authToken={user_uuid}"
+        },
+        "webhooks": [
+            { "event": "repo:created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:deleted", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:updated", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:transfer", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:imported", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:fork", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:commit_status_created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:commit_status_updated", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:push", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:branch_created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:branch_deleted", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "repo:commit_comment_created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:updated", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:approved", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:changes_request_created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:changes_request_removed", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:unapproved", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:fulfilled", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:rejected", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:comment_created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:comment_deleted", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "issue:created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "issue:updated", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "issue:comment_created", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "user:account_property_changed", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:comment_resolved", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "project:updated", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:push", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:comment_reopened", "url": "/api/client/bitbucket/webhook/handle" },
+            { "event": "pullrequest:superseded", "url": "/api/client/bitbucket/webhook/handle" }
+        ]
+    },
+    "scopes": ["account", "repository", "issue", "project", "email", "pullrequest"],
+    "contexts": ["account"]
+}
