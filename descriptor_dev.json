@@ -6,7 +6,7 @@
         "name": "OrgSignals-bitbucket-dev",
         "url": "https://www.orgsignals.ai"
     },
-    "baseUrl": "https://sigcli.share.zrok.io",
+    "baseUrl": "https://7b71-2405-201-d002-5814-34ff-85c0-783-aa5c.ngrok-free.app",
     "authentication": {
         "type": "jwt"
     },
