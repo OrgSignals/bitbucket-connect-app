@@ -6,7 +6,7 @@
         "name": "OrgSignals-bitbucket-dev",
         "url": "https://www.orgsignals.ai"
     },
-    "baseUrl": "https://7b71-2405-201-d002-5814-34ff-85c0-783-aa5c.ngrok-free.app",
+    "baseUrl": "https://bitbucketapp.orgsignals.com/descriptor_dev.json",
     "authentication": {
         "type": "jwt"
     },
