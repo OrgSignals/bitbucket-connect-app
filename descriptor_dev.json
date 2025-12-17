@@ -6,7 +6,7 @@
         "name": "OrgSignals-bitbucket-dev",
         "url": "https://www.orgsignals.ai"
     },
-    "baseUrl": "https://bitbucketapp.orgsignals.com",
+    "baseUrl": "https://sigauth.share.zrok.io",
     "authentication": {
         "type": "jwt"
     },
